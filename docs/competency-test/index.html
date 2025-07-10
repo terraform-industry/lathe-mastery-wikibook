@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lathe Safety Competency Test</title>
+    <style>
+        /* Basic styling - clean and professional */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        /* Forms */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        button {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #1565c0;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        /* Question styles */
+        .question {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .question-text {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .options {
+            list-style: none;
+        }
+        
+        .option {
+            margin-bottom: 10px;
+        }
+        
+        .option label {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        
+        .option label:hover {
+            background: #e3f2fd;
+        }
+        
+        .option input[type="radio"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        /* Progress */
+        .progress-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #4caf50;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        /* Results */
+        .result-pass {
+            color: #4caf50;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .result-fail {
+            color: #f44336;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .score-details {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        /* Certificate */
+        .certificate {
+            border: 3px solid #1976d2;
+            padding: 40px;
+            margin-top: 30px;
+            text-align: center;
+            background: white;
+            position: relative;
+        }
+        
+        .certificate h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .certificate .cert-text {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        
+        .certificate .score {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4caf50;
+            margin: 20px 0;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+            
+            .certificate {
+                page-break-inside: avoid;
+                margin: 0;
+                border-color: black;
+            }
+        }
+        
+        /* Error messages */
+        .error {
+            color: #f44336;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ffebee;
+            border-radius: 4px;
+        }
+        
+        /* Hidden by default */
+        .hidden {
+            display: none;
+        }
+        
+        /* Timer */
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .timer {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <div id="loginSection">
+            <h1>Lathe Safety Competency Test</h1>
+            <p class="subtitle">Test your knowledge of safe lathe operation practices</p>
+            
+            <div class="form-group">
+                <label for="name">Enter your full name:</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+                <div id="nameError" class="error hidden"></div>
+            </div>
+            
+            <button onclick="startTest()">Begin Test</button>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 4px;">
+                <h3>Test Information:</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>20 questions on lathe safety and best practices</li>
+                    <li>Multiple choice format</li>
+                    <li>Passing score: 80% (16 out of 20)</li>
+                    <li>Time limit: 30 minutes</li>
+                    <li>Certificate provided upon passing</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Test Section -->
+        <div id="testSection" class="hidden">
+            <h1>Lathe Safety Competency Test</h1>
+            <div class="timer" id="timer">Time: 30:00</div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar">0%</div>
+            </div>
+            
+            <div id="questionContainer"></div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <button onclick="previousQuestion()" id="prevBtn">Previous</button>
+                <button onclick="nextQuestion()" id="nextBtn">Next</button>
+                <button onclick="submitTest()" id="submitBtn" class="hidden">Submit Test</button>
+            </div>
+        </div>
+        
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+            <h1>Test Results</h1>
+            
+            <div id="resultMessage"></div>
+            
+            <div class="score-details" id="scoreDetails"></div>
+            
+            <div id="certificateSection" class="hidden">
+                <div class="certificate">
+                    <h1>CERTIFICATE OF COMPLETION</h1>
+                    <p class="cert-text">This certifies that</p>
+                    <p class="cert-text" style="font-size: 28px; font-weight: bold;" id="certName"></p>
+                    <p class="cert-text">has successfully completed the</p>
+                    <p class="cert-text" style="font-size: 24px; font-weight: bold;">Lathe Safety Competency Test</p>
+                    <p class="score" id="certScore"></p>
+                    <p class="cert-text">Date: <span id="certDate"></span></p>
+                    <p class="cert-text">Session: <span id="certSession"></span></p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;" class="no-print">
+                <button onclick="window.print()">Print Certificate</button>
+                <button onclick="downloadResults()">Download Results</button>
+                <button onclick="location.reload()">Take Test Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load questions -->
+    <script src="questions.js"></script>
+    
+    <script>
+        // Global variables
+        let currentQuestion = 0;
+        let userAnswers = [];
+        let testStartTime;
+        let timerInterval;
+        let timeRemaining = 30 * 60; // 30 minutes in seconds
+        
+        // Get session from URL parameter
+        function getSessionId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('session') || 'default-session';
+        }
+        
+        // Start test
+        function startTest() {
+            const name = document.getElementById('name').value.trim();
+            const errorDiv = document.getElementById('nameError');
+            
+            // Validate name is entered
+            if (!name) {
+                errorDiv.textContent = 'Please enter your name';
+                errorDiv.classList.remove('hidden');
+                return;
+            }
+            
+            // Hide any error messages
+            errorDiv.classList.add('hidden');
+            
+            // Store user info
+            localStorage.setItem('testUser', JSON.stringify({
+                name: name,
+                session: getSessionId()
+            }));
+            
+            // Initialize test
+            testStartTime = new Date();
+            userAnswers = new Array(20).fill(null);
+            
+            // Shuffle and select 20 questions
+            const shuffled = shuffleArray(questions);
+            window.testQuestions = shuffled.slice(0, 20);
+            
+            // Start timer
+            startTimer();
+            
+            // Show test section
+            document.getElementById('loginSection').classList.add('hidden');
+            document.getElementById('testSection').classList.remove('hidden');
+            
+            // Display first question
+            displayQuestion();
+        }
+        
+        // Timer function
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+                document.getElementById('timer').textContent = 
+                    `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    submitTest();
+                }
+            }, 1000);
+        }
+        
+        // Display current question
+        function displayQuestion() {
+            const question = window.testQuestions[currentQuestion];
+            const container = document.getElementById('questionContainer');
+            
+            container.innerHTML = `
+                <div class="question">
+                    <div class="question-number">Question ${currentQuestion + 1} of 20</div>
+                    <div class="question-text">${question.question}</div>
+                    <ul class="options">
+                        ${question.options.map((option, index) => `
+                            <li class="option">
+                                <label>
+                                    <input type="radio" name="q${currentQuestion}" value="${index}"
+                                        ${userAnswers[currentQuestion] === index ? 'checked' : ''}
+                                        onchange="selectAnswer(${index})">
+                                    <span>${option}</span>
+                                </label>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            
+            // Update progress bar
+            const answered = userAnswers.filter(a => a !== null).length;
+            const progress = (answered / 20) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressBar').textContent = Math.round(progress) + '%';
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').classList.toggle('hidden', currentQuestion === 19);
+            document.getElementById('submitBtn').classList.toggle('hidden', currentQuestion !== 19);
+        }
+        
+        // Record answer
+        function selectAnswer(answerIndex) {
+            userAnswers[currentQuestion] = answerIndex;
+        }
+        
+        // Navigation
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                displayQuestion();
+            }
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < 19) {
+                currentQuestion++;
+                displayQuestion();
+            }
+        }
+        
+        // Submit test
+        function submitTest() {
+            // Stop timer
+            clearInterval(timerInterval);
+            
+            // Calculate score
+            let correct = 0;
+            const results = window.testQuestions.map((question, index) => {
+                const isCorrect = userAnswers[index] === question.correct;
+                if (isCorrect) correct++;
+                return {
+                    question: question.question,
+                    userAnswer: userAnswers[index],
+                    correctAnswer: question.correct,
+                    isCorrect: isCorrect
+                };
+            });
+            
+            const score = (correct / 20) * 100;
+            const passed = score >= 80;
+            const testEndTime = new Date();
+            const timeTaken = Math.round((testEndTime - testStartTime) / 1000 / 60);
+            
+            // Get user info
+            const userInfo = JSON.parse(localStorage.getItem('testUser'));
+            
+            // Store results
+            const testResult = {
+                ...userInfo,
+                score: score,
+                correct: correct,
+                passed: passed,
+                date: testEndTime.toISOString(),
+                timeTaken: timeTaken,
+                results: results
+            };
+            localStorage.setItem('latestTestResult', JSON.stringify(testResult));
+            
+            // Show results
+            showResults(testResult);
+        }
+        
+        // Display results
+        function showResults(testResult) {
+            document.getElementById('testSection').classList.add('hidden');
+            document.getElementById('resultsSection').classList.remove('hidden');
+            
+            // Result message
+            const messageDiv = document.getElementById('resultMessage');
+            if (testResult.passed) {
+                messageDiv.innerHTML = `
+                    <p class="result-pass">Congratulations! You passed!</p>
+                    <p>You demonstrated competency in lathe safety practices.</p>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <p class="result-fail">Test not passed</p>
+                    <p>You scored ${testResult.correct}/20 (${testResult.score.toFixed(1)}%). 
+                    A score of 80% or higher is required to pass.</p>
+                    <p>Please review the safety materials and try again.</p>
+                `;
+            }
+            
+            // Score details
+            document.getElementById('scoreDetails').innerHTML = `
+                <h3>Test Details:</h3>
+                <p><strong>Name:</strong> ${testResult.name}</p>
+                <p><strong>Score:</strong> ${testResult.correct}/20 (${testResult.score.toFixed(1)}%)</p>
+                <p><strong>Time taken:</strong> ${testResult.timeTaken} minutes</p>
+                <p><strong>Date:</strong> ${new Date(testResult.date).toLocaleDateString()}</p>
+                <p><strong>Session:</strong> ${testResult.session}</p>
+            `;
+            
+            // Show certificate if passed
+            if (testResult.passed) {
+                document.getElementById('certificateSection').classList.remove('hidden');
+                document.getElementById('certName').textContent = testResult.name;
+                document.getElementById('certScore').textContent = 
+                    `Score: ${testResult.correct}/20 (${testResult.score.toFixed(1)}%)`;
+                document.getElementById('certDate').textContent = 
+                    new Date(testResult.date).toLocaleDateString();
+                document.getElementById('certSession').textContent = testResult.session;
+            }
+        }
+        
+        // Download results as text file
+        function downloadResults() {
+            const result = JSON.parse(localStorage.getItem('latestTestResult'));
+            const text = `Lathe Safety Competency Test Results
+====================================
+Name: ${result.name}
+Date: ${new Date(result.date).toLocaleString()}
+Session: ${result.session}
+Score: ${result.correct}/20 (${result.score.toFixed(1)}%)
+Result: ${result.passed ? 'PASSED' : 'NOT PASSED'}
+Time taken: ${result.timeTaken} minutes
+
+Please save this file for your records.`;
+            
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `lathe-safety-test-${result.name.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.txt`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
