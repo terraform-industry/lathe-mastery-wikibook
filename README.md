@@ -9,7 +9,7 @@ to advanced techniques.
 ## 📖 Read the Book
 
 Visit the full documentation at:
-**<https://jonilsson.github.io/lathe-mastery-wikibook/>**
+**<https://terraform-industry.github.io/lathe-mastery-wikibook/>**
 
 ## 🛠️ Development
 
@@ -43,8 +43,8 @@ See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
-[deploy-badge]: https://github.com/JoNilsson/lathe-mastery-wikibook/actions/workflows/deploy-docs.yml/badge.svg
-[deploy-url]: https://github.com/JoNilsson/lathe-mastery-wikibook/actions/workflows/deploy-docs.yml
-[lint-badge]: https://github.com/JoNilsson/lathe-mastery-wikibook/actions/workflows/markdown-lint.yml/badge.svg
-[lint-url]: https://github.com/JoNilsson/lathe-mastery-wikibook/actions/workflows/markdown-lint.yml
+[deploy-badge]: https://github.com/terraform-industry/lathe-mastery-wikibook/actions/workflows/deploy-docs.yml/badge.svg
+[deploy-url]: https://github.com/terraform-industry/lathe-mastery-wikibook/actions/workflows/deploy-docs.yml
+[lint-badge]: https://github.com/terraform-industry/lathe-mastery-wikibook/actions/workflows/markdown-lint.yml/badge.svg
+[lint-url]: https://github.com/terraform-industry/lathe-mastery-wikibook/actions/workflows/markdown-lint.yml
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
