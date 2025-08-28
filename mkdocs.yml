@@ -65,6 +65,7 @@ nav:
     - 1.3 Machine Anatomy: 01-foundations/03-machine-anatomy.md
   - 02. Machine-Specific Guides:
     - 2.1 Cincinnati 10-inch Tray-Top: 02-machine-guides/01-cincinnati-10in-tray-top.md
+    - 2.2 Cincinnati 15-inch Tray-Top: 02-machine-guides/02-cincinnati-15in-tray-top.md
   - 03. Tool Language:
     - 3.1 Tool Materials: 03-tool-language/01-tool-materials.md
     - 3.2 Tool Geometry: 03-tool-language/02-geometry-basics.md
