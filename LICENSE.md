@@ -12,7 +12,12 @@ and other written works
 All **graphical content** in this repository — including images, diagrams,
 or other graphical depictions  
 — is licensed under the
+
+<!--markdownlint-disable-->
+
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
+<!--markdownlint-enable-->
 
 You are free to:
 
@@ -33,7 +38,11 @@ A copy of the full license text can be found here:
 
 ## 2. Software Source Code License — MIT License
 
+<!--markdownlint-disable-->
+
 All **software source code** in this repository is licensed under the MIT License:
+
+<!--markdownlint-enable-->
 
 ```text
 MIT License
