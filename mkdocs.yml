@@ -63,44 +63,47 @@ nav:
     - 1.1 The Sacred Contract: 01-foundations/01-sacred-contract.md
     - 1.2 Core Principles: 01-foundations/02-core-principles.md
     - 1.3 Machine Anatomy: 01-foundations/03-machine-anatomy.md
-  - 02. Tool Language:
-    - 2.1 Tool Materials: 02-tool-language/01-tool-materials.md
-    - 2.2 Tool Geometry: 02-tool-language/02-geometry-basics.md
-    - 2.3 Grinding Tools: 02-tool-language/03-grinding-tools.md
-    - 2.4 Tool Selection: 02-tool-language/04-tool-selection.md
-  - 03. Workshop Ecosystem:
-    - 3.1 Material Selection: 03-workshop-ecosystem/01-material-selection.md
-    - 3.2 Lubricants & Chemicals: 03-workshop-ecosystem/02-lubricants-chemicals.md
-  - 04. Fundamental Operations:
-    - 4.1 Facing: 04-fundamental-operations/01-facing.md
-    - 4.2 Turning Basics: 04-fundamental-operations/02-turning-basics.md
-    - 4.3 Turning Shoulders: 04-fundamental-operations/03-turning-shoulders.md
-    - 4.4 Supporting Work: 04-fundamental-operations/04-supporting-work.md
-  - 05. Precision Measurement:
-    - 5.1 Calipers & Micrometers: 05-precision-measurement/01-calipers-micrometers.md
-    - 5.2 Dial Indicators: 05-precision-measurement/02-indicators.md
-    - 5.3 Specialized Gauges: 05-precision-measurement/03-specialized-gauges.md
-  - 06. Advanced Operations:
-    - 6.1 Drilling: 06-advanced-operations/01-drilling.md
-    - 6.2 Boring: 06-advanced-operations/02-boring.md
-    - 6.3 Trepanning: 06-advanced-operations/03-trepanning.md
-  - 07. Threading:
-    - 7.1 Taps & Dies: 07-threading/01-taps-and-dies.md
-    - 7.2 Single-Point Threading: 07-threading/02-single-point-threading.md
-    - 7.3 Internal Threading: 07-threading/03-internal-threading.md
-  - 08. Critical Operations:
-    - 8.1 Parting: 08-critical-operations/01-parting.md
-    - 8.2 Surface Finish: 08-critical-operations/02-surface-finish.md
-    - 8.3 Speeds & Feeds: 08-critical-operations/03-speeds-and-feeds.md
-  - 09. Troubleshooting:
-    - 9.1 Defeating Chatter: 09-troubleshooting/01-defeating-chatter.md
-    - 9.2 Deburring: 09-troubleshooting/02-deburring.md
-  - 10. Advanced Techniques:
-    - 10.1 Radius Turning: 10-advanced-techniques/01-radius-turning.md
-    - 10.2 Project Planning: 10-advanced-techniques/02-project-planning.md
+  - 02. Machine-Specific Guides:
+    - 2.1 Cincinnati 10-inch Tray-Top: 02-machine-guides/01-cincinnati-10in-tray-top.md
+  - 03. Tool Language:
+    - 3.1 Tool Materials: 03-tool-language/01-tool-materials.md
+    - 3.2 Tool Geometry: 03-tool-language/02-geometry-basics.md
+    - 3.3 Grinding Tools: 03-tool-language/03-grinding-tools.md
+    - 3.4 Tool Selection: 03-tool-language/04-tool-selection.md
+  - 04. Workshop Ecosystem:
+    - 4.1 Material Selection: 04-workshop-ecosystem/01-material-selection.md
+    - 4.2 Lubricants & Chemicals: 04-workshop-ecosystem/02-lubricants-chemicals.md
+  - 05. Fundamental Operations:
+    - 5.1 Facing: 05-fundamental-operations/01-facing.md
+    - 5.2 Turning Basics: 05-fundamental-operations/02-turning-basics.md
+    - 5.3 Turning Shoulders: 05-fundamental-operations/03-turning-shoulders.md
+    - 5.4 Supporting Work: 05-fundamental-operations/04-supporting-work.md
+  - 06. Precision Measurement:
+    - 6.1 Calipers & Micrometers: 06-precision-measurement/01-calipers-micrometers.md
+    - 6.2 Dial Indicators: 06-precision-measurement/02-indicators.md
+    - 6.3 Specialized Gauges: 06-precision-measurement/03-specialized-gauges.md
+  - 07. Advanced Operations:
+    - 7.1 Drilling: 07-advanced-operations/01-drilling.md
+    - 7.2 Boring: 07-advanced-operations/02-boring.md
+    - 7.3 Trepanning: 07-advanced-operations/03-trepanning.md
+  - 08. Threading:
+    - 8.1 Taps & Dies: 08-threading/01-taps-and-dies.md
+    - 8.2 Single-Point Threading: 08-threading/02-single-point-threading.md
+    - 8.3 Internal Threading: 08-threading/03-internal-threading.md
+  - 09. Critical Operations:
+    - 9.1 Parting: 09-critical-operations/01-parting.md
+    - 9.2 Surface Finish: 09-critical-operations/02-surface-finish.md
+    - 9.3 Speeds & Feeds: 09-critical-operations/03-speeds-and-feeds.md
+  - 10. Troubleshooting:
+    - 10.1 Defeating Chatter: 10-troubleshooting/01-defeating-chatter.md
+    - 10.2 Deburring: 10-troubleshooting/02-deburring.md
+  - 11. Advanced Techniques:
+    - 11.1 Radius Turning: 11-advanced-techniques/01-radius-turning.md
+    - 11.2 Project Planning: 11-advanced-techniques/02-project-planning.md
   - Contributing: CONTRIBUTING.md
   - Authors: AUTHORS.md
   - Changelog: CHANGELOG.md
+  - License: LICENSE.md
 
 extra:
   social:
@@ -108,5 +111,6 @@ extra:
       link: https://github.com/JoNilsson/lathe-mastery-wikibook
 
 copyright: |
-  &copy; 2025 <a href="https://github.com/JoNilsson/lathe-mastery-wikibook"  target="_blank" rel="noopener">The Lathe Mastery Wiki Book</a> - 
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/"  target="_blank" rel="noopener">CC BY-SA 4.0</a>
+  &copy; 2025 <a href="https://github.com/JoNilsson/lathe-mastery-wikibook"  target="_blank" rel="noopener">The Lathe Mastery Wiki Book</a><br>
+  Content: <a href="https://creativecommons.org/licenses/by-sa/4.0/"  target="_blank" rel="noopener">CC BY-SA 4.0</a> | 
+  Code: <a href="/LICENSE/"  target="_blank" rel="noopener">MIT License</a>
