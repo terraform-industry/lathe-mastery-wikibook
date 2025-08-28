@@ -108,9 +108,9 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/JoNilsson/lathe-mastery-wikibook
+      link: https://github.com/terraform-industry/lathe-mastery-wikibook
 
 copyright: |
-  &copy; 2025 <a href="https://github.com/JoNilsson/lathe-mastery-wikibook"  target="_blank" rel="noopener">The Lathe Mastery Wiki Book</a><br>
+  &copy; 2025 <a href="https://github.com/terraform-industry/lathe-mastery-wikibook"  target="_blank" rel="noopener">The Lathe Mastery Wiki Book</a><br>
   Content: <a href="https://creativecommons.org/licenses/by-sa/4.0/"  target="_blank" rel="noopener">CC BY-SA 4.0</a> | 
   Code: <a href="/LICENSE/"  target="_blank" rel="noopener">MIT License</a>
