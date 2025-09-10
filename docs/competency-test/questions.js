@@ -236,6 +236,96 @@ const questions = [
     ],
     correct: 2,
     explanation: "Master machinists understand the dangers intimately and maintain disciplined safety practices."
+  },
+
+  // Cincinnati 10-inch Tray-Top Specific Questions
+  {
+    question: "On the Cincinnati 10-inch tray-top lathe, what must be done before attempting to change spindle speeds?",
+    options: [
+      "Turn the motor to full speed first",
+      "Stop the headstock spindle completely",
+      "Engage the clutch",
+      "Apply cutting oil"
+    ],
+    correct: 1,
+    explanation: "The headstock spindle must be stopped completely before changing speeds - NEVER attempt speed changes while running!"
+  },
+  {
+    question: "The Cincinnati 10-inch uses a 'color-match' system for:",
+    options: [
+      "Tool identification",
+      "Speed selection guidance",
+      "Safety warnings",
+      "Maintenance schedules"
+    ],
+    correct: 1,
+    explanation: "The color-match dial on the headstock front face guides proper speed selection using colored reference marks."
+  },
+  {
+    question: "When engaging power movements on the Cincinnati 10-inch, what is the correct sequence?",
+    options: [
+      "Engage carriage first, then cross slide",
+      "Engage both simultaneously",
+      "Engage cross slide first, then carriage",
+      "Only one can be engaged at a time"
+    ],
+    correct: 3,
+    explanation: "Only one power movement (carriage OR cross slide) can be engaged at a time - never both simultaneously."
+  },
+  {
+    question: "The Cincinnati 10-inch leadscrew reverse lever allows:",
+    options: [
+      "Spindle direction reversal",
+      "Speed range changes",
+      "Feeding direction reversal for carriage and cross slide",
+      "Emergency stops"
+    ],
+    correct: 2,
+    explanation: "The leadscrew reverse lever reverses the feeding direction for both carriage and cross slide movements."
+  },
+  {
+    question: "For chip removal on the Cincinnati 10-inch, the proper tool is:",
+    options: [
+      "Compressed air",
+      "Hands (when stopped)",
+      "Chip rake or brush",
+      "Shop rag"
+    ],
+    correct: 2,
+    explanation: "Always use a chip rake or brush for chip removal - never use hands, even when the machine is stopped."
+  },
+  {
+    question: "When starting the Cincinnati 10-inch motor, the correct procedure involves:",
+    options: [
+      "Pressing START then engaging clutch",
+      "Engaging clutch then pressing START",
+      "Both actions simultaneously",
+      "Starting with clutch already engaged"
+    ],
+    correct: 0,
+    explanation: "Press the FORWARD button to start the motor, THEN engage the clutch by raising the start-stop lever."
+  },
+  {
+    question: "For the Cincinnati 10-inch tray-top lathe, proper spindle rotation (facing from tailstock) should be:",
+    options: [
+      "Clockwise for all operations",
+      "Counterclockwise for forward cutting",
+      "Variable depending on material",
+      "Alternating for best surface finish"
+    ],
+    correct: 1,
+    explanation: "When facing the spindle from the tailstock end, it should rotate counterclockwise for forward cutting operations."
+  },
+  {
+    question: "If work is not turning straight on the Cincinnati 10-inch, first check:",
+    options: [
+      "Spindle speed settings",
+      "Tool sharpness",
+      "Headstock and tailstock center alignment",
+      "Motor voltage"
+    ],
+    correct: 2,
+    explanation: "The most common cause of work not turning straight is misalignment between headstock and tailstock centers."
   }
 ];
 
